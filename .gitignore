@@ -1,0 +1,10 @@
+# Uploaded files – these are stored on the Railway Volume, not in git
+/srv/uploads/
+
+# Local Caddy data & config caches
+.caddy/
+caddy_data/
+
+# OS artefacts
+.DS_Store
+Thumbs.db

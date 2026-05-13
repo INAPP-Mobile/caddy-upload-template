@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caddy File Server</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body  { font-family: system-ui, sans-serif; background: #f5f5f5;
+            display: flex; justify-content: center; align-items: flex-start;
+            min-height: 100vh; padding: 4rem 1rem; margin: 0; }
+    .card { background: #fff; border-radius: 8px; padding: 2rem 2.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,.1); width: 100%; max-width: 560px; }
+    h1    { margin-top: 0; }
+    .btn  { display: inline-block; padding: .6rem 1.2rem;
+            background: #0070f3; color: #fff; text-decoration: none;
+            border-radius: 6px; font-weight: 600; margin-top: .5rem; }
+    .btn:hover { background: #005ecb; }
+    hr    { border: none; border-top: 1px solid #eee; margin: 1.5rem 0; }
+    ul    { padding-left: 1.2rem; }
+    li    { margin-bottom: .4rem; }
+    a     { color: #0070f3; }
+    code  { background: #f0f0f0; padding: .15rem .4rem; border-radius: 4px;
+            font-size: .9em; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>&#128196; Caddy File Server</h1>
+    <p>
+      This server is powered by
+      <a href="https://caddyserver.com" target="_blank" rel="noopener">Caddy</a>
+      with the
+      <a href="https://github.com/git001/caddyv2-upload" target="_blank" rel="noopener">caddyv2-upload</a>
+      plugin and deployed on
+      <a href="https://railway.com" target="_blank" rel="noopener">Railway</a>.
+    </p>
+
+    <a class="btn" href="/upload">Go to upload page &rarr;</a>
+
+    <hr>
+
+    <h2 style="font-size:1rem;margin-bottom:.5rem">Quick API reference</h2>
+    <ul>
+      <li>
+        <strong>Upload a file</strong> (requires auth)<br>
+        <code>POST /upload</code> with <code>multipart/form-data</code>, field name <code>myFile</code>
+      </li>
+      <li>
+        <strong>Browse uploaded files</strong><br>
+        <a href="/uploads/">/uploads/</a>
+      </li>
+      <li>
+        <strong>Health check</strong><br>
+        <a href="/health">/health</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
