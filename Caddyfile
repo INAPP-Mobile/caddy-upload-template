@@ -94,9 +94,8 @@
     <small><a href="/">&#8592; Back to home</a></small>
   </div>
 </body>
-</html>` 200 {
-    content_type text/html
-}
+</html>` 200
+        header Content-Type text/html
     }
 
     # ── Public access to uploaded files ──────────────────────────────────────
