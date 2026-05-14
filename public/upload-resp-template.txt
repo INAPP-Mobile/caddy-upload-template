@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Upload successful</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body   { font-family: system-ui, sans-serif; background: #f5f5f5;
+             display: flex; justify-content: center; align-items: flex-start;
+             min-height: 100vh; padding: 4rem 1rem; margin: 0; }
+    .card  { background: #fff; border-radius: 8px; padding: 2rem 2.5rem;
+             box-shadow: 0 2px 12px rgba(0,0,0,.1); width: 100%; max-width: 480px; }
+    h1     { margin-top: 0; font-size: 1.4rem; color: #0a7c42; }
+    a      { color: #0070f3; }
+    small  { display: block; margin-top: 1.5rem; color: #666; font-size: .8rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>&#10003; File uploaded successfully</h1>
+    <p>Your file has been received and saved.</p>
+    <p><a href="/uploads/">Browse uploaded files &rarr;</a></p>
+    <small><a href="/upload">&#8592; Upload another file</a></small>
+    <small><a href="/">&#8592; Back to home</a></small>
+  </div>
+</body>
+</html>

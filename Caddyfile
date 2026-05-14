@@ -50,9 +50,11 @@
         # POST  ─ receive a multipart/form-data file upload
         @post method POST
         upload @post {
-            dest_dir        /srv/uploads
-            max_form_buffer 50MB
-            max_filesize    50MB
+            dest_dir          /srv/uploads
+            root_dir          /
+            response_template /srv/public/upload-resp-template.txt
+            max_form_buffer   50MB
+            max_filesize      50MB
         }
 
         # GET / HEAD  ─ serve the HTML upload form
