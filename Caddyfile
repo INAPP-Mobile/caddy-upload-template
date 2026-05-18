@@ -57,8 +57,7 @@
             create_uuid_dir   true
             pass_thru         true
         }
-        respond @post `{"url":"/uploads/{http.upload.uuiddir}/{http.upload.filename}"}` 200
-        header @post Content-Type application/json
+        respond @post "/uploads/{http.upload.uuiddir}/{http.upload.filename}" 200
 
         # GET / HEAD  ─ serve the HTML upload form
         @get method GET HEAD
