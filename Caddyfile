@@ -57,7 +57,6 @@
             max_filesize      50MB
             create_uuid_dir   true
         }
-        header /upload X-Upload-Url "/uploads/{http.upload.uuiddir}/{http.upload.filename}" defer
 
         # GET / HEAD  ─ serve the HTML upload form
         @get method GET HEAD
@@ -66,6 +65,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="upload-url" content="/uploads/{http.upload.uuiddir}/{http.upload.filename}">
   <title>Upload a file</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
