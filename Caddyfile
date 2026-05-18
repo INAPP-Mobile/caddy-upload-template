@@ -54,19 +54,7 @@
             max_form_buffer   50MB
             max_filesize      50MB
             create_uuid_dir   true
-            pass_thru         true
         }
-        respond @post `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Upload successful</title>
-</head>
-<body>
-  <h1>Upload successful</h1>
-</body>
-</html>` 200
-        header @post X-Upload-Url "/uploads/{http.upload.uuiddir}/{http.upload.filename}"
 
         # GET / HEAD  ─ serve the HTML upload form
         @get method GET HEAD
