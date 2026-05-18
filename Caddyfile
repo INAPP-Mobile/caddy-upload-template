@@ -3,7 +3,6 @@
 # ─────────────────────────────────────────────────────────────────────────────
 {
     order upload before file_server
-    order replace before respond
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -61,17 +60,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="upload-url" content="/uploads/__UUDDIR__/__FILENAME__">
   <title>Upload successful</title>
 </head>
 <body>
   <h1>Upload successful</h1>
 </body>
 </html>` 200
-        replace @post {
-            __UUDDIR__   {http.upload.uuiddir}
-            __FILENAME__ {http.upload.filename}
-        }
+        header @post X-Upload-Url "/uploads/{http.upload.uuiddir}/{http.upload.filename}" defer
 
         # GET / HEAD  ─ serve the HTML upload form
         @get method GET HEAD
