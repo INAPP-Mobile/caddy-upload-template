@@ -55,9 +55,7 @@
             max_form_buffer   50MB
             max_filesize      50MB
             create_uuid_dir   true
-            pass_thru         true
         }
-        respond @post "/uploads/{http.upload.uuiddir}/{http.upload.filename}" 200
 
         # GET / HEAD  ─ serve the HTML upload form
         @get method GET HEAD
