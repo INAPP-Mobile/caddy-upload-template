@@ -51,6 +51,7 @@
         upload @post {
             dest_dir          /srv/uploads
             root_dir          /
+            response_template srv/public/upload-resp-template.txt
             max_form_buffer   50MB
             max_filesize      50MB
             create_uuid_dir   true
