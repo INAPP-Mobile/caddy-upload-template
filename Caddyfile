@@ -64,7 +64,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="upload-url" content="/uploads/{{.Replacer.http.upload.uuiddir}}/{{.Replacer.http.upload.filename}}">
+  <meta name="upload-url" content="/uploads/{{.http.upload.uuiddir}}/{{.http.upload.filename}}">
   <title>Upload successful</title>
 </head>
 <body>

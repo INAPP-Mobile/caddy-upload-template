@@ -6,7 +6,8 @@ FROM caddy:2-builder AS builder
 # xcaddy compiles Caddy from source and injects the requested plugins.
 # Plugin source: https://github.com/git001/caddyv2-upload
 RUN xcaddy build \
-    --with github.com/git001/caddyv2-upload
+    --with github.com/git001/caddyv2-upload \
+    --with github.com/caddyserver/replace-response
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Stage 2 – Minimal production image
