@@ -56,7 +56,7 @@
             max_filesize      50MB
             create_uuid_dir   true
         }
-        response @post `<!DOCTYPE html>
+        respond @post `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
